@@ -4,3 +4,4 @@ pandas==1.0.5
 matplotlib==3.2.2
 sklearn==0.23.1
 pickleshare==0.7.5
+pickle==4.0
