@@ -11,12 +11,14 @@ s.subheader(""" steps
              1. upload file
              2. File must contain REQUIRED  columns
              3. select NAN preprocessing according your requiremet
+             4. Download the Pickle from link
              """)
 
 # configurations
 #s.set_option('deprecation.showfileUploderEncoding',False)
 #side bar
 s.sidebar.subheader("upload file")
+s.write("Example Dataset [link](https://drive.google.com/file/d/1af84QZB4l13DWEyKPIxlBjtJWG2m6okb/view?usp=sharing)")
 
 #upload file
 file = s.sidebar.file_uploader(label="CSV or EXCEL FILE",type=['csv','xlsx'])
