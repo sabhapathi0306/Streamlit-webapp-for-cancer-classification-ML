@@ -16,7 +16,7 @@ about = s.sidebar.radio("",['Home','About us'])
 
 if about == "Home":
     s.write(""" # DECISION SUPPORT SYSTEM """)  # title
-    s.subheader(""" ### Tag: Just upload and predict """)
+    s.subheader(""" Tag: Just upload and predict """)
     s.subheader(""" MODEL PREDICTIONS BASED ON ALREADY TRINED MODEL""")
     s.subheader(""" steps
                  1. upload file
