@@ -2,12 +2,14 @@ import streamlit as s
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 import pickle
 import seaborn as sns
-s.write(""" # Decision support system """) #title
+s.write(""" # DECISION SUPPORT SYSTEM """) #title
+s.subheader(""" MODEL PREDICTIONS BASED ALREADY TRINED MODEL""")
 s.subheader(""" steps
              1. upload file
-             2. File must contain 16 columns
+             2. File must contain REQUIRED  columns
              3. select NAN preprocessing according your requiremet
              """)
 
@@ -34,7 +36,10 @@ except:
 
 try:
     if df is not None:
-        s.write(''' ## Required columns''')
+        s.subheader('''Required columns''')
+        s.write(''''VARIANT_CLASS', 'TLOD', 'shiftscore', 'Sample.AF', 'SIFT', 'MBQ', 'MFRL', 'MMQ', 'Sample.AD', 'Sample.F1R2',
+             'Sample.F2R1', 'DP', 'GERMQ', 'MPOS',
+             'POPAF', 'Sample.DP''')
         data = df[
             ['VARIANT_CLASS', 'TLOD', 'shiftscore', 'Sample.AF', 'SIFT', 'MBQ', 'MFRL', 'MMQ', 'Sample.AD', 'Sample.F1R2',
              'Sample.F2R1', 'DP', 'GERMQ', 'MPOS',
@@ -71,7 +76,8 @@ try:
 except:
     print("d")
 try:
-    NAN = s.sidebar.selectbox("Select",{"DROP","MEAN"})
+    s.sidebar.subheader("Select NAN process method")
+    NAN = s.sidebar.selectbox("",{"DROP","MEAN"})
     if NAN == "DROP":
         data = data.dropna()
     if NAN=="MEAN":
@@ -82,7 +88,7 @@ try:
     fig = plt.figure(figsize=(12, 10))
     cor = data.corr()
     sns.heatmap(cor, annot=True, cmap=plt.cm.Reds)
-    s.write(fig)
+    #s.write(fig)
 
 except:
     s.write("")
@@ -112,12 +118,18 @@ except:
 #         s.write("")
 # grsph(choose)
 #classification
-try:
-    if data is not None:
-        with open('model_pickel','rb') as f:
-            model_load = pickle.load(f)
 
+
+
+
+try:
+    s.sidebar.subheader("Pickle file")
+    s.sidebar.write("DOWNLOAD [link](https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing)")
+    pickle_file = s.sidebar.file_uploader(label="Download and Upload")
+    if data is not None:
+            model_load = pickle.load(pickle_file)
             out = model_load.predict(data)
+            #s.write(out)
             s.subheader("PREDICTIONS")
             p1= pd.DataFrame(out)
             p1_count = p1[0].value_counts()
