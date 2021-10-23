@@ -175,7 +175,7 @@ if about == "Home":
 #         s.write("EROORRR")
 
 with open('file/model.pkl','rb') as f:
-    model_load = pickle.load(pickle_file)
+    model_load = pickle.load(f)
 out = model_load.predict(data)
 s.write(out)
 if about=='About us':
