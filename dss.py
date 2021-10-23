@@ -174,10 +174,8 @@ if about == "Home":
 #     except:
 #         s.write("EROORRR")
 
-s.sidebar.subheader("Pickle file")
-s.sidebar.write("DOWNLOAD [link](https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing)")
-pickle_file = s.sidebar.file_uploader(label="Download and Upload")
-model_load = pickle.load(pickle_file)
+with open('file/model.pkl','rb') as f:
+    model_load = pickle.load(pickle_file)
 out = model_load.predict(data)
 s.write(out)
 if about=='About us':
