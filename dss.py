@@ -97,11 +97,11 @@ if about == "Home":
             mean_null = data[null_values].mean()
             data[null_values].fillna(value=mean_null, inplace=True)
         s.write("Final Shape of Dataset",data.shape)
-        s.write('correlation Heatmap')
+        s.subheader(''' CORRELATION HEATMAP ''')
         fig = plt.figure(figsize=(12, 10))
         cor = data.corr()
         sns.heatmap(cor, annot=True, cmap=plt.cm.Reds)
-        #s.write(fig)
+        s.write(fig)
 
     except:
         s.write("")
@@ -192,3 +192,4 @@ if about=='About us':
     s.write("3. Satyam singh")
     s.write("   RVCE, Biotechnology")
     s.write("For any query: contact @ [link] (https://www.linkedin.com/in/satyam-raikar-477198181) or 9380352695")
+    
