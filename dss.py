@@ -21,12 +21,13 @@ if about == "Home":
                  1. upload file
                  2. File must contain REQUIRED  columns
                  3. select NAN preprocessing according your requiremet
-                 4.Download the Pickle from link
+                 4. Download the Example dataset file from link if required
                  """)
 
     # configurations
     #s.set_option('deprecation.showfileUploderEncoding',False)
     #side bar
+    s.write("Download Example dataset[link](https://drive.google.com/file/d/1af84QZB4l13DWEyKPIxlBjtJWG2m6okb/view?usp=sharing)")
     s.sidebar.subheader("upload file")
 
     #upload file
@@ -140,12 +141,16 @@ if about == "Home":
                     model_load = pickle.load(f)
                 out = model_load.predict(data)
                 #s.write(out)
-                s.subheader("PREDICTIONS")
+                s.subheader("PREDICTIONS OUTPUT")
                 p1= pd.DataFrame(out)
                 p1_count = p1[0].value_counts()
                 p1_pd = pd.DataFrame(p1_count)
-                s.write(p1_pd.rename(columns={0:'count'}))
+                #s.write(p1_pd.rename(columns={0:'count'}))
                 p = p1[0].value_counts().to_dict()
+                r1 = max(p,key=p.get)
+                r2 =  max(list(p.values()))
+                s.subheader('''Probability of prediction is "{}" type with count of {}'''.format(r1,r2))
+                s.write(p1_pd.rename(columns={0: 'count'}))
                 label = []
                 sizes = []
                 for x,y in p.items():
