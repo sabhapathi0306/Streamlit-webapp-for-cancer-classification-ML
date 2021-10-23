@@ -16,7 +16,7 @@ about = s.sidebar.radio("",['Home','About us'])
 
 if about == "Home":
     s.write(""" # DECISION SUPPORT SYSTEM """)  # title
-    s.subheader(""""### tag :just upload and predict """)
+    s.subheader(""" ### Tag: Just upload and predict """)
     s.subheader(""" MODEL PREDICTIONS BASED ON ALREADY TRINED MODEL""")
     s.subheader(""" steps
                  1. upload file
@@ -185,10 +185,10 @@ if about=='About us':
     s.write("Decision support system for cancer exome datasets,which helps to predict the percentage probability of cancer type for particular features,"
             "through which one can under go personized treatements based on persentage of prediction and early dignosis of cancer also possible.")
     s.subheader("Creators")
-    s.write("1. Satyam suresh raiker contact @ [link] (https://www.linkedin.com/in/satyam-raikar-477198181) or 9380352695")
+    s.write("1. Satyam suresh raiker ")
     s.write("   RVCE, Biotechnology")
     s.write("2. Adithya sabhapathi")
     s.write("   RVCE, Biotechnology")
     s.write("3. Satyam singh")
     s.write("   RVCE, Biotechnology")
-   
+    s.write("For any query: contact @ [link] (https://www.linkedin.com/in/satyam-raikar-477198181) or 9380352695")
