@@ -1,0 +1,4 @@
+seaborn==0.10.1
+pandas
+matplotlib
+pickleshare==0.7.5
