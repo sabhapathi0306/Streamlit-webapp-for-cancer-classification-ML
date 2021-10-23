@@ -90,7 +90,7 @@ try:
     fig = plt.figure(figsize=(12, 10))
     cor = data.corr()
     sns.heatmap(cor, annot=True, cmap=plt.cm.Reds)
-    #s.write(fig)
+    s.write(fig)
 
 except:
     s.write("")
