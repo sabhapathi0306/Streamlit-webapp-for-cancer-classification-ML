@@ -172,7 +172,7 @@ if about == "Home":
         else:
             s.write("error with data")
     except:
-        s.write("")
+        s.write("EROORRR")
 
 if about=='About us':
     s.write("""# DECISION SUPPORT SYSTEM""")
