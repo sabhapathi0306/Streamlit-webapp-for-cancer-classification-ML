@@ -133,47 +133,53 @@ if about == "Home":
 
 
 
-    try:
-        s.sidebar.subheader("Pickle file")
-        s.sidebar.write("DOWNLOAD [link](https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing)")
-        pickle_file = s.sidebar.file_uploader(label="Download and Upload")
-        if data is not None:
-                model_load = pickle.load(pickle_file)
-                out = model_load.predict(data)
-                #s.write(out)
-                s.subheader("PREDICTIONS")
-                p1= pd.DataFrame(out)
-                p1_count = p1[0].value_counts()
-                p1_pd = pd.DataFrame(p1_count)
-                s.write(p1_pd.rename(columns={0:'count'}))
-                p = p1[0].value_counts().to_dict()
-                label = []
-                sizes = []
-                for x,y in p.items():
-                    label.append(x)
-                    sizes.append(y)
-                try:
-                    s.subheader('PIE CHART')
-                    f1 = plt.figure(figsize=(10,30))
-                    plt.pie(sizes, labels=label, autopct="%1.1f%%" )
-                    s.pyplot(f1)
+#     try:
+#         s.sidebar.subheader("Pickle file")
+#         s.sidebar.write("DOWNLOAD [link](https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing)")
+#         pickle_file = s.sidebar.file_uploader(label="Download and Upload")
+#         if data is not None:
+#                 model_load = pickle.load(pickle_file)
+#                 out = model_load.predict(data)
+#                 #s.write(out)
+#                 s.subheader("PREDICTIONS")
+#                 p1= pd.DataFrame(out)
+#                 p1_count = p1[0].value_counts()
+#                 p1_pd = pd.DataFrame(p1_count)
+#                 s.write(p1_pd.rename(columns={0:'count'}))
+#                 p = p1[0].value_counts().to_dict()
+#                 label = []
+#                 sizes = []
+#                 for x,y in p.items():
+#                     label.append(x)
+#                     sizes.append(y)
+#                 try:
+#                     s.subheader('PIE CHART')
+#                     f1 = plt.figure(figsize=(10,30))
+#                     plt.pie(sizes, labels=label, autopct="%1.1f%%" )
+#                     s.pyplot(f1)
 
-                    s.subheader('BAR CHART')
-                    f2= plt.figure(figsize=(10,10))
-                    plt.bar(label,sizes)
-                    plt.xlabel("cancer type")
-                    plt.ylabel("Frequency")
-                    plt.yticks(rotation=60)
-                    plt.xticks(rotation=70)
-                    plt.show()
-                    s.pyplot(f2)
-                except:
-                    s.write("error with graphs")
-        else:
-            s.write("error with data")
-    except:
-        s.write("EROORRR")
+#                     s.subheader('BAR CHART')
+#                     f2= plt.figure(figsize=(10,10))
+#                     plt.bar(label,sizes)
+#                     plt.xlabel("cancer type")
+#                     plt.ylabel("Frequency")
+#                     plt.yticks(rotation=60)
+#                     plt.xticks(rotation=70)
+#                     plt.show()
+#                     s.pyplot(f2)
+#                 except:
+#                     s.write("error with graphs")
+#         else:
+#             s.write("error with data")
+#     except:
+#         s.write("EROORRR")
 
+s.sidebar.subheader("Pickle file")
+s.sidebar.write("DOWNLOAD [link](https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing)")
+pickle_file = s.sidebar.file_uploader(label="Download and Upload")
+model_load = pickle.load(pickle_file)
+out = model_load.predict(data)
+s.write(out)
 if about=='About us':
     s.write("""# DECISION SUPPORT SYSTEM""")
     s.subheader("HI..!")
