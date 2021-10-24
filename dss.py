@@ -16,8 +16,9 @@ about = s.sidebar.radio("",['Home','About us'])
 
 if about == "Home":
     s.write(""" # DECISION SUPPORT SYSTEM """)  # title
-    s.subheader(""" Tag: Just upload and predict """)
+    #s.subheader(""" Tag: Just upload and predict """)
     s.subheader(""" MODEL PREDICTIONS BASED ON ALREADY TRINED MODEL""")
+    s.write("Pickle file [link] (https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing) ")
     s.subheader(""" steps
                  1. upload file
                  2. File must contain REQUIRED  columns
@@ -184,6 +185,7 @@ if about=='About us':
     s.subheader("HI..!")
     s.write("Decision support system for cancer exome datasets,which helps to predict the percentage probability of cancer type for particular features,"
             "through which one can under go personized treatements based on persentage of prediction and early dignosis of cancer also possible.")
+    s.write("For model source code click on link: [link] (https://github.com/sabhapathi0306/DSS-for-cancer-exome-datasets) ")
     s.subheader("Creators")
     s.write("1. Satyam suresh raiker ")
     s.write("   RVCE, Biotechnology")
@@ -191,5 +193,5 @@ if about=='About us':
     s.write("   RVCE, Biotechnology")
     s.write("3. Satyam singh")
     s.write("   RVCE, Biotechnology")
-    s.write("For any query: contact @ [link] (https://www.linkedin.com/in/satyam-raikar-477198181) or 9380352695")
+    #s.write("For any query: contact @ [link] (https://www.linkedin.com/in/satyam-raikar-477198181) or 9380352695")
     
