@@ -203,7 +203,7 @@ if about == "Home":
                         plt.pie(sizes, labels=label, autopct="%1.1f%%")
                         s.pyplot(f1)
                         if s.button("save image"):
-                            f.savefig('pie.png')
+                            f1.savefig('pie.png')
                             s.success('saved!!')
 
                         s.subheader('BAR CHART')
@@ -241,7 +241,7 @@ if about == "Home":
                     s.write('PairPlot')
                     s.write(fig)
                     if s.button("Save Image"):
-                        fig.savefig('heatmap.png')
+                        fig.savefig('pairplot.png')
                         s.success('saved!!')
                 elif g == 'Heatmap':
                     s.write('correlation Heatmap')
@@ -299,7 +299,7 @@ if about == "Home":
                         plt.pie(sizes, labels=label, autopct="%1.1f%%")
                         s.pyplot(f1)
                         if s.button("save image"):
-                            f1.savefig('heatmap.png')
+                            f1.savefig('pie.png')
                             s.success('saved!!')
 
                         s.subheader('BAR CHART')
@@ -313,7 +313,7 @@ if about == "Home":
                         plt.show()
                         s.pyplot(f2)
                         if s.button("Save image"):
-                            f2.savefig('heatmap.png')
+                            f2.savefig('Barchart.png')
                             s.success('saved!!')
 
                     except:
