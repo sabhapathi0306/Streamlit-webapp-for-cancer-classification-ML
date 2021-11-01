@@ -163,7 +163,7 @@ if about == "Home":
         if data_choose == "Only Testing":
             s.write("Testing......")
             with s.beta_expander("See explanation"):
-                s.image(Image.open('aa.PNG'),caption="Model Results")
+                s.image(Image.open('file/aa.PNG'),caption="Model Results")
                 s.write("""
                     1. In this method we are using the already trained model 
                     2. Random forest model used for training
@@ -259,7 +259,7 @@ if about == "Home":
             grsph(choose)
             s.write("Testing......")
             with s.beta_expander("See explanation"):
-                s.image(Image.open('aa.PNG'),caption="Model Results")
+                s.image(Image.open('file/aa.PNG'),caption="Model Results")
                 s.write("""
                     1. In this method we are using the already trained model 
                     2. Random forest model used for training
