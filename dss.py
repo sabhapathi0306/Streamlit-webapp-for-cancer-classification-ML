@@ -1,5 +1,5 @@
 import time
-
+from PIL import  Image
 import streamlit as s
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -15,6 +15,7 @@ for i in range(100):
     progress.progress(i + 1)
 about = s.sidebar.radio("", ['Home', 'About us'])
 
+#home
 if about == "Home":
     s.write(""" # DECISION SUPPORT SYSTEM """)  # title
     # s.subheader(""" Tag: Just upload and predict """)
@@ -107,6 +108,13 @@ if about == "Home":
 
     except:
         s.write("")
+    s.sidebar.subheader("Select type of traing and testing")
+    with s.sidebar.beta_expander("see explanation"):
+        s.write("""
+           1.In Already trained option ,using pretrained data prediction are carried out      
+           2.In Training and testinig option, Using supervised learning algorithms you are going to train first then testing
+           """)
+    s.sidebar.radio("Select",['None','Already trained','Training and testing'])
 
     #data vizualization
     s.write("Select type of operation you want to perform ")
@@ -128,7 +136,7 @@ if about == "Home":
                 if g=='None':
                     s.write('')
 
-                if g == 'pairplot':
+                elif g == 'pairplot':
                     fig = sns.pairplot(data)
                     s.pyplot(fig)
                     s.write('PairPlot')
@@ -137,7 +145,7 @@ if about == "Home":
                         fig.savefig('pairplot.png')
                         s.success('saved!!')
 
-                if g == 'Heatmap':
+                elif g == 'Heatmap':
                     s.write('correlation Heatmap')
                     fig = plt.figure(figsize=(12, 10))
                     cor = data.corr()
@@ -154,6 +162,14 @@ if about == "Home":
 
         if data_choose == "Only Testing":
             s.write("Testing......")
+            with s.beta_expander("See explanation"):
+                s.image(Image.open('aa.PNG'),caption="Model Results")
+                s.write("""
+                    1. In this method we are using the already trained model 
+                    2. Random forest model used for training
+                    3. Model score and pickle file are below
+                    4. Download pickle file [link] (https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing)
+                 """)
             try:
                 # s.sidebar.subheader("Pickle file")
                 # s.sidebar.write(
@@ -216,8 +232,10 @@ if about == "Home":
 
 
             def grsph(g):
-
-                if g == 'pairplot':
+                if g=='None':
+                    s.write('')
+                    
+                elif g == 'pairplot':
                     fig = sns.pairplot(data)
                     s.pyplot(fig)
                     s.write('PairPlot')
@@ -240,6 +258,14 @@ if about == "Home":
 
             grsph(choose)
             s.write("Testing......")
+            with s.beta_expander("See explanation"):
+                s.image(Image.open('aa.PNG'),caption="Model Results")
+                s.write("""
+                    1. In this method we are using the already trained model 
+                    2. Random forest model used for training
+                    3. Model score and pickle file are below
+                    4. Download pickle file [link] (https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing)
+                 """)
             try:
                 # s.sidebar.subheader("Pickle file")
                 # s.sidebar.write(
