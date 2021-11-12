@@ -19,7 +19,7 @@ about = s.sidebar.radio("", ['Home', 'About us'])
 if about == "Home":
     s.write(""" # DECISION SUPPORT SYSTEM """)  # title
     # s.subheader(""" Tag: Just upload and predict """)
-    s.subheader(""" MODEL PREDICTIONS BASED ON ALREADY TRINED MODEL""")
+    s.subheader(""" MODEL PREDICTIONS BASED ON ALREADY TRAINED MODEL""")
     s.write("Pickle file [link] (https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing) ")
     s.subheader(""" steps
                  1. upload file
