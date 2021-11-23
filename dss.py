@@ -108,12 +108,12 @@ if about == "Home":
 
     except:
         s.write("")
-    s.sidebar.subheader("Select type of traing and testing")
-    with s.sidebar.beta_expander("see explanation"):
-        s.write("""
-           1.In Already trained option ,using pretrained data prediction are carried out      
-           2.In Training and testinig option, Using supervised learning algorithms you are going to train first then testing
-           """)
+#     s.sidebar.subheader("Select type of traing and testing")
+#     with s.sidebar.beta_expander("see explanation"):
+#         s.write("""
+#            1.In Already trained option ,using pretrained data prediction are carried out      
+#            2.In Training and testinig option, Using supervised learning algorithms you are going to train first then testing
+#            """)
 #     s.sidebar.radio("Select",['None','Already trained','Training and testing'])
 
     #data vizualization
