@@ -114,7 +114,7 @@ if about == "Home":
            1.In Already trained option ,using pretrained data prediction are carried out      
            2.In Training and testinig option, Using supervised learning algorithms you are going to train first then testing
            """)
-    s.sidebar.radio("Select",['None','Already trained','Training and testing'])
+#     s.sidebar.radio("Select",['None','Already trained','Training and testing'])
 
     #data vizualization
     s.write("Select type of operation you want to perform ")
