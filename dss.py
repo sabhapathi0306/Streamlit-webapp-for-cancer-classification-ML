@@ -2,11 +2,11 @@ import time
 from PIL import  Image
 import streamlit as s
 import pandas as pd
-import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pickle
 import seaborn as sns
+import matplotlib.pyplot as plt
 
 # progress
 progress = s.progress(0)
