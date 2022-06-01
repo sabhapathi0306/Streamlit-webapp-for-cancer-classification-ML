@@ -5,6 +5,5 @@ numpy == 1.22.1
 matplotlib==3.2.2
 pickleshare==0.7.5
 sklearn==0.0
-scikit-image==0.16.2
 scikit-plot==0.3.7
 xlrd==1.2.0
