@@ -336,7 +336,7 @@ if about == 'About us':
         "Decision support system for cancer exome datasets,which helps to predict the percentage probability of cancer type for particular features,"
         "through which one can under go personized treatements based on persentage of prediction and early dignosis of cancer also possible.")
     s.write(
-        "For model source code click on link: [link] (https://github.com/sabhapathi0306/DSS-for-cancer-exome-datasets) ")
+        "For model source code click on link: [GitHub] (https://github.com/sabhapathi0306/DSS-for-cancer-exome-datasets) ")
 #     s.subheader("Creators")
 #     s.write("1. Satyam suresh raiker ")
 #     s.write("   RVCE, Biotechnology")
