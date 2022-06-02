@@ -168,7 +168,7 @@ if about == "Home":
                     1. In this method we are using the already trained model 
                     2. Random forest model used for training
                     3. Model score and pickle file are below
-                    4. Download pickle file [link] (https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing)
+                    4. "Download Pickle file [Pickle File](https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing) "
                  """)
             try:
                 # s.sidebar.subheader("Pickle file")
