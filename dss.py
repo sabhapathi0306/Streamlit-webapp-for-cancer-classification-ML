@@ -20,7 +20,7 @@ if about == "Home":
     s.write(""" # DECISION SUPPORT SYSTEM """)  # title
     # s.subheader(""" Tag: Just upload and predict """)
     s.subheader(""" MODEL PREDICTIONS BASED ON ALREADY TRAINED MODEL""")
-    s.write("Pickle file (https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing) ")
+    s.write("Pickle file [Pickle File](https://drive.google.com/file/d/1lvJinJcoRIwERhgcImoBC5jIy2Cs438F/view?usp=sharing) ")
     s.subheader(""" steps
                  1. upload file
                  2. File must contain REQUIRED  columns
@@ -32,7 +32,7 @@ if about == "Home":
     # s.set_option('deprecation.showfileUploderEncoding',False)
     # side bar
     s.write(
-        "Download Example dataset[link](https://drive.google.com/file/d/1af84QZB4l13DWEyKPIxlBjtJWG2m6okb/view?usp=sharing)")
+        "Download Example dataset[Example Dataset](https://drive.google.com/file/d/1dK-Ako1fmGr6H3x5gv9ATYvUzfBHkrws/view?usp=sharing)")
     s.sidebar.subheader("upload file")
 
     # upload file
