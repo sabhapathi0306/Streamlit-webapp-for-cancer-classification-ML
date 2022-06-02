@@ -109,7 +109,7 @@ if about == "Home":
     except:
         s.write("")
 #     s.sidebar.subheader("Select type of traing and testing")
-#     with s.sidebar.beta_expander("see explanation"):
+#     with s.sidebar.expander("see explanation"):
 #         s.write("""
 #            1.In Already trained option ,using pretrained data prediction are carried out      
 #            2.In Training and testinig option, Using supervised learning algorithms you are going to train first then testing
@@ -118,7 +118,7 @@ if about == "Home":
 
     #data vizualization
     s.write("Select type of operation you want to perform ")
-    with s.beta_expander("See explanation"):
+    with s.expander("See explanation"):
         s.write("""
           1. In Datavizualtion option one can perform heatmap and pairplot operation
           2. In Testing option one can perform testing the data with trained model and can observe the graphical output
@@ -162,7 +162,7 @@ if about == "Home":
 
         if data_choose == "Only Testing":
             s.write("Testing......")
-            with s.beta_expander("See explanation"):
+            with s.expander("See explanation"):
                 s.image(Image.open('file/aa.PNG'),caption="Model Results")
                 s.write("""
                     1. In this method we are using the already trained model 
@@ -258,7 +258,7 @@ if about == "Home":
 
             grsph(choose)
             s.write("Testing......")
-            with s.beta_expander("See explanation"):
+            with s.expander("See explanation"):
                 s.image(Image.open('file/aa.PNG'),caption="Model Results")
                 s.write("""
                     1. In this method we are using the already trained model 
